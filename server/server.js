@@ -26,7 +26,11 @@ app.use(fileUpload());
 
 //implementing helmet
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 //cors
 app.use(cors());
 //routes
